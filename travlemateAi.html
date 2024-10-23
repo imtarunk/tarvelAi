@@ -1,0 +1,299 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Social Media Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap"
+      rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+    </style>
+  </head>
+  <body class="flex justify-center items-center min-h-screen">
+    <div class="bg-white rounded-3xl shadow-lg w-full max-w-6xl p-6 flex">
+      <!-- Sidebar -->
+      <div class="w-1/4 p-4">
+        <div class="flex items-center mb-8">
+          <img
+            alt="User profile picture"
+            class="rounded-full w-12 h-12"
+            height="50"
+            src="https://storage.googleapis.com/a1aa/image/UVqCGicQY9ruPhfSvDW2xj4tC2hLPI7uGrElf2gUCnaFOopTA.jpg"
+            width="50" />
+          <div class="ml-4">
+            <h2 class="font-bold text-lg">Bogdan Nikitin</h2>
+            <p class="text-gray-500">@nikitinteam</p>
+          </div>
+        </div>
+        <nav class="mb-8">
+          <ul>
+            <li class="mb-4">
+              <a class="flex items-center text-black font-bold" href="#">
+                <i class="fas fa-newspaper mr-4"> </i>
+                News Feed
+              </a>
+            </li>
+            <li class="mb-4">
+              <a class="flex items-center text-gray-500" href="#">
+                <i class="fas fa-envelope mr-4"> </i>
+                Messages
+                <span
+                  class="ml-auto bg-red-500 text-white rounded-full px-2 py-1 text-xs">
+                  6
+                </span>
+              </a>
+            </li>
+            <li class="mb-4">
+              <a class="flex items-center text-gray-500" href="#">
+                <i class="fas fa-comments mr-4"> </i>
+                Forums
+              </a>
+            </li>
+            <li class="mb-4">
+              <a class="flex items-center text-gray-500" href="#">
+                <i class="fas fa-user-friends mr-4"> </i>
+                Friends
+                <span
+                  class="ml-auto bg-red-500 text-white rounded-full px-2 py-1 text-xs">
+                  3
+                </span>
+              </a>
+            </li>
+            <li class="mb-4">
+              <a class="flex items-center text-gray-500" href="#">
+                <i class="fas fa-photo-video mr-4"> </i>
+                Media
+              </a>
+            </li>
+            <li class="mb-4">
+              <a class="flex items-center text-gray-500" href="#">
+                <i class="fas fa-cog mr-4"> </i>
+                Settings
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="bg-gray-100 p-4 rounded-lg flex items-center">
+          <img
+            alt="App icon"
+            class="w-12 h-12"
+            height="50"
+            src="https://storage.googleapis.com/a1aa/image/QtPydC0J4zIABFGeyuaxTxCs0Eg7IyC7JeAVmIIQgxPIOopTA.jpg"
+            width="50" />
+          <div class="ml-4">
+            <h3 class="font-bold">Download the App</h3>
+          </div>
+        </div>
+      </div>
+      <!-- Main Content -->
+      <div class="w-3/4 p-4">
+        <div class="flex justify-between items-center mb-8">
+          <h1 class="text-2xl font-bold">Feeds</h1>
+          <div class="flex space-x-4">
+            <a class="text-gray-500" href="#"> Recents </a>
+            <a class="text-gray-500" href="#"> Friends </a>
+            <a class="text-gray-500" href="#"> Popular </a>
+          </div>
+        </div>
+        <div class="mb-8">
+          <div class="bg-blue-100 p-4 rounded-lg mb-4">
+            <div class="flex items-center mb-4">
+              <img
+                alt="User profile picture"
+                class="rounded-full w-12 h-12"
+                height="50"
+                src="https://storage.googleapis.com/a1aa/image/UVqCGicQY9ruPhfSvDW2xj4tC2hLPI7uGrElf2gUCnaFOopTA.jpg"
+                width="50" />
+              <div class="ml-4">
+                <h2 class="font-bold">George Lobko</h2>
+                <p class="text-gray-500">2 hours ago</p>
+              </div>
+            </div>
+            <p class="mb-4">
+              Hi everyone, today I was on the most beautiful mountain in the
+              world😍, I also want to say hi to
+              <span class="text-blue-500"> Silena </span>
+              ,
+              <span class="text-red-500"> Olya </span>
+              and
+              <span class="text-green-500"> Davis </span>
+              !
+            </p>
+            <div class="grid grid-cols-2 gap-4 mb-4">
+              <img
+                alt="Mountain view"
+                class="rounded-lg"
+                height="150"
+                src="https://storage.googleapis.com/a1aa/image/8AgltrZVDHowARFjKv0MXt9Rys2uwdIrlBurfr3GQTVCH00JA.jpg"
+                width="150" />
+              <img
+                alt="Mountain view"
+                class="rounded-lg"
+                height="150"
+                src="https://storage.googleapis.com/a1aa/image/8AgltrZVDHowARFjKv0MXt9Rys2uwdIrlBurfr3GQTVCH00JA.jpg"
+                width="150" />
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center space-x-4">
+                <span class="text-gray-500">
+                  <i class="fas fa-heart"> </i>
+                  6355
+                </span>
+                <span class="text-gray-500">
+                  <i class="fas fa-comment"> </i>
+                  Like
+                </span>
+                <span class="text-gray-500">
+                  <i class="fas fa-comment"> </i>
+                  Comment
+                </span>
+              </div>
+              <button class="bg-pink-500 text-white px-4 py-2 rounded-lg">
+                Woow!!!
+              </button>
+            </div>
+          </div>
+          <div class="bg-yellow-100 p-4 rounded-lg">
+            <div class="flex items-center mb-4">
+              <img
+                alt="User profile picture"
+                class="rounded-full w-12 h-12"
+                height="50"
+                src="https://storage.googleapis.com/a1aa/image/UVqCGicQY9ruPhfSvDW2xj4tC2hLPI7uGrElf2gUCnaFOopTA.jpg"
+                width="50" />
+              <div class="ml-4">
+                <h2 class="font-bold">Vitaliy Boyko</h2>
+                <p class="text-gray-500">3 hours ago</p>
+              </div>
+            </div>
+            <p class="mb-4">
+              I chose a wonderful coffee today, I wanted to tell you what
+              product they have in stock - it's a latte with coconut 🥥 milk...
+              delicious... it's really incredibly tasty!!!
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center space-x-4">
+                <span class="text-gray-500">
+                  <i class="fas fa-heart"> </i>
+                  6355
+                </span>
+                <span class="text-gray-500">
+                  <i class="fas fa-comment"> </i>
+                  Like
+                </span>
+                <span class="text-gray-500">
+                  <i class="fas fa-comment"> </i>
+                  Comment
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-100 p-4 rounded-lg flex items-center">
+          <input
+            class="bg-white p-2 rounded-lg flex-grow mr-4"
+            placeholder="Share something"
+            type="text" />
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">
+            Send
+          </button>
+        </div>
+      </div>
+      <!-- Right Sidebar -->
+      <div class="w-1/4 p-4">
+        <div class="mb-8">
+          <h2 class="font-bold text-lg mb-4">Stories</h2>
+          <div class="flex space-x-4">
+            <img
+              alt="Story image"
+              class="rounded-lg w-24 h-24"
+              height="100"
+              src="https://storage.googleapis.com/a1aa/image/og9B1gjVqML5N5tKkTSVcaiQyxEFQ6qbhkBw5k67OighDa6E.jpg"
+              width="100" />
+            <img
+              alt="Story image"
+              class="rounded-lg w-24 h-24"
+              height="100"
+              src="https://storage.googleapis.com/a1aa/image/og9B1gjVqML5N5tKkTSVcaiQyxEFQ6qbhkBw5k67OighDa6E.jpg"
+              width="100" />
+          </div>
+        </div>
+        <div class="mb-8">
+          <h2 class="font-bold text-lg mb-4">Suggestions</h2>
+          <ul>
+            <li class="flex items-center mb-4">
+              <img
+                alt="User profile picture"
+                class="rounded-full w-12 h-12"
+                height="50"
+                src="https://storage.googleapis.com/a1aa/image/UVqCGicQY9ruPhfSvDW2xj4tC2hLPI7uGrElf2gUCnaFOopTA.jpg"
+                width="50" />
+              <div class="ml-4">
+                <h3 class="font-bold">Nick Shelburne</h3>
+                <button
+                  class="bg-blue-500 text-white px-4 py-2 rounded-lg ml-auto">
+                  Follow
+                </button>
+              </div>
+            </li>
+            <li class="flex items-center mb-4">
+              <img
+                alt="User profile picture"
+                class="rounded-full w-12 h-12"
+                height="50"
+                src="https://storage.googleapis.com/a1aa/image/UVqCGicQY9ruPhfSvDW2xj4tC2hLPI7uGrElf2gUCnaFOopTA.jpg"
+                width="50" />
+              <div class="ml-4">
+                <h3 class="font-bold">Brittni Lando</h3>
+                <button
+                  class="bg-blue-500 text-white px-4 py-2 rounded-lg ml-auto">
+                  Follow
+                </button>
+              </div>
+            </li>
+            <li class="flex items-center mb-4">
+              <img
+                alt="User profile picture"
+                class="rounded-full w-12 h-12"
+                height="50"
+                src="https://storage.googleapis.com/a1aa/image/UVqCGicQY9ruPhfSvDW2xj4tC2hLPI7uGrElf2gUCnaFOopTA.jpg"
+                width="50" />
+              <div class="ml-4">
+                <h3 class="font-bold">Ivan Shevchenko</h3>
+                <button
+                  class="bg-blue-500 text-white px-4 py-2 rounded-lg ml-auto">
+                  Follow
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="font-bold text-lg mb-4">Recommendations</h2>
+          <div class="flex flex-wrap space-x-4">
+            <div class="bg-blue-100 p-4 rounded-lg mb-4">
+              <h3 class="font-bold">UI/UX</h3>
+            </div>
+            <div class="bg-pink-100 p-4 rounded-lg mb-4">
+              <h3 class="font-bold">Music</h3>
+            </div>
+            <div class="bg-purple-100 p-4 rounded-lg mb-4">
+              <h3 class="font-bold">Hiking</h3>
+            </div>
+            <div class="bg-green-100 p-4 rounded-lg mb-4">
+              <h3 class="font-bold">Cooking</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
