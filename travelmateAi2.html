@@ -1,0 +1,319 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Media Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      const { useState } = React;
+
+      const Sidebar = () => (
+        <div className="w-full md:w-1/4 p-4">
+          <div className="flex items-center mb-8">
+            <img
+              src="https://storage.googleapis.com/a1aa/image/UVqCGicQY9ruPhfSvDW2xj4tC2hLPI7uGrElf2gUCnaFOopTA.jpg"
+              alt="User profile picture"
+              className="rounded-full w-12 h-12"
+            />
+            <div className="ml-4">
+              <h2 className="font-bold text-lg">Bogdan Nikitin</h2>
+              <p className="text-gray-500">@nikitinteam</p>
+            </div>
+          </div>
+          <nav className="mb-8">
+            <ul>
+              <li className="mb-4">
+                <a href="#" className="flex items-center text-black font-bold">
+                  <i className="fas fa-newspaper mr-4"></i> News Feed
+                </a>
+              </li>
+              <li className="mb-4">
+                <a href="#" className="flex items-center text-gray-500">
+                  <i className="fas fa-envelope mr-4"></i> Messages
+                  <span className="ml-auto bg-red-500 text-white rounded-full px-2 py-1 text-xs">
+                    6
+                  </span>
+                </a>
+              </li>
+              <li className="mb-4">
+                <a href="#" className="flex items-center text-gray-500">
+                  <i className="fas fa-comments mr-4"></i> Forums
+                </a>
+              </li>
+              <li className="mb-4">
+                <a href="#" className="flex items-center text-gray-500">
+                  <i className="fas fa-user-friends mr-4"></i> Friends
+                  <span className="ml-auto bg-red-500 text-white rounded-full px-2 py-1 text-xs">
+                    3
+                  </span>
+                </a>
+              </li>
+              <li className="mb-4">
+                <a href="#" className="flex items-center text-gray-500">
+                  <i className="fas fa-photo-video mr-4"></i> Media
+                </a>
+              </li>
+              <li className="mb-4">
+                <a href="#" className="flex items-center text-gray-500">
+                  <i className="fas fa-cog mr-4"></i> Settings
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div className="bg-gray-100 p-4 rounded-lg flex items-center">
+            <img
+              src="https://storage.googleapis.com/a1aa/image/QtPydC0J4zIABFGeyuaxTxCs0Eg7IyC7JeAVmIIQgxPIOopTA.jpg"
+              alt="App icon"
+              className="w-12 h-12"
+            />
+            <div className="ml-4">
+              <h3 className="font-bold">Download the App</h3>
+            </div>
+          </div>
+        </div>
+      );
+
+      const FeedItem = ({ user, time, content, images, likes, comments }) => (
+        <div
+          className={`p-4 rounded-lg mb-4 ${
+            user === "George Lobko" ? "bg-blue-100" : "bg-yellow-100"
+          }`}>
+          <div className="flex items-center mb-4">
+            <img
+              src="https://storage.googleapis.com/a1aa/image/UVqCGicQY9ruPhfSvDW2xj4tC2hLPI7uGrElf2gUCnaFOopTA.jpg"
+              alt="User profile picture"
+              className="rounded-full w-12 h-12"
+            />
+            <div className="ml-4">
+              <h2 className="font-bold">{user}</h2>
+              <p className="text-gray-500">{time}</p>
+            </div>
+          </div>
+          <p className="mb-4">{content}</p>
+          {images && (
+            <div className="grid grid-cols-2 gap-4 mb-4">
+              {images.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt="Feed image"
+                  className="rounded-lg"
+                />
+              ))}
+            </div>
+          )}
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <span className="text-gray-500">
+                <i className="fas fa-heart"></i> {likes}
+              </span>
+              <span className="text-gray-500">
+                <i className="fas fa-comment"></i> Like
+              </span>
+              <span className="text-gray-500">
+                <i className="fas fa-comment"></i> Comment
+              </span>
+            </div>
+            {user === "George Lobko" && (
+              <button className="bg-pink-500 text-white px-4 py-2 rounded-lg">
+                Woow!!!
+              </button>
+            )}
+          </div>
+        </div>
+      );
+
+      const MainContent = () => {
+        const [feeds, setFeeds] = useState([
+          {
+            user: "George Lobko",
+            time: "2 hours ago",
+            content:
+              "Hi everyone, today I was on the most beautiful mountain in the world😍, I also want to say hi to Silena, Olya and Davis!",
+            images: [
+              "https://storage.googleapis.com/a1aa/image/8AgltrZVDHowARFjKv0MXt9Rys2uwdIrlBurfr3GQTVCH00JA.jpg",
+              "https://storage.googleapis.com/a1aa/image/8AgltrZVDHowARFjKv0MXt9Rys2uwdIrlBurfr3GQTVCH00JA.jpg",
+            ],
+            likes: 6355,
+            comments: 0,
+          },
+          {
+            user: "Vitaliy Boyko",
+            time: "3 hours ago",
+            content:
+              "I chose a wonderful coffee today, I wanted to tell you what product they have in stock - it's a latte with coconut 🥥 milk... delicious... it's really incredibly tasty!!!",
+            images: [],
+            likes: 6355,
+            comments: 0,
+          },
+        ]);
+
+        const [newPost, setNewPost] = useState("");
+
+        const handlePost = () => {
+          if (newPost.trim()) {
+            setFeeds([
+              ...feeds,
+              {
+                user: "New User",
+                time: "Just now",
+                content: newPost,
+                images: [],
+                likes: 0,
+                comments: 0,
+              },
+            ]);
+            setNewPost("");
+          }
+        };
+
+        return (
+          <div className="w-full md:w-1/2 p-4">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-2xl font-bold">Feeds</h1>
+              <div className="flex space-x-4">
+                <a href="#" className="text-gray-500">
+                  Recents
+                </a>
+                <a href="#" className="text-gray-500">
+                  Friends
+                </a>
+                <a href="#" className="text-gray-500">
+                  Popular
+                </a>
+              </div>
+            </div>
+            <div className="mb-8">
+              {feeds.map((feed, index) => (
+                <FeedItem key={index} {...feed} />
+              ))}
+            </div>
+            <div className="bg-gray-100 p-4 rounded-lg flex items-center">
+              <input
+                type="text"
+                className="bg-white p-2 rounded-lg flex-grow mr-4"
+                placeholder="Share something"
+                value={newPost}
+                onChange={(e) => setNewPost(e.target.value)}
+              />
+              <button
+                className="bg-blue-500 text-white px-4 py-2 rounded-lg"
+                onClick={handlePost}>
+                Send
+              </button>
+            </div>
+          </div>
+        );
+      };
+
+      const RightSidebar = () => (
+        <div className="w-full md:w-1/4 p-4">
+          <div className="mb-8">
+            <h2 className="font-bold text-lg mb-4">Stories</h2>
+            <div className="flex space-x-4">
+              <img
+                src="https://storage.googleapis.com/a1aa/image/og9B1gjVqML5N5tKkTSVcaiQyxEFQ6qbhkBw5k67OighDa6E.jpg"
+                alt="Story image"
+                className="rounded-lg w-24 h-24"
+              />
+              <img
+                src="https://storage.googleapis.com/a1aa/image/og9B1gjVqML5N5tKkTSVcaiQyxEFQ6qbhkBw5k67OighDa6E.jpg"
+                alt="Story image"
+                className="rounded-lg w-24 h-24"
+              />
+            </div>
+          </div>
+          <div className="mb-8">
+            <h2 className="font-bold text-lg mb-4">Suggestions</h2>
+            <ul>
+              <li className="flex items-center mb-4">
+                <img
+                  src="https://storage.googleapis.com/a1aa/image/UVqCGicQY9ruPhfSvDW2xj4tC2hLPI7uGrElf2gUCnaFOopTA.jpg"
+                  alt="User profile picture"
+                  className="rounded-full w-12 h-12"
+                />
+                <div className="ml-4">
+                  <h3 className="font-bold">Nick Shelburne</h3>
+                  <button className="bg-blue-500 text-white px-4 py-2 rounded-lg ml-auto">
+                    Follow
+                  </button>
+                </div>
+              </li>
+              <li className="flex items-center mb-4">
+                <img
+                  src="https://storage.googleapis.com/a1aa/image/UVqCGicQY9ruPhfSvDW2xj4tC2hLPI7uGrElf2gUCnaFOopTA.jpg"
+                  alt="User profile picture"
+                  className="rounded-full w-12 h-12"
+                />
+                <div className="ml-4">
+                  <h3 className="font-bold">Brittni Lando</h3>
+                  <button className="bg-blue-500 text-white px-4 py-2 rounded-lg ml-auto">
+                    Follow
+                  </button>
+                </div>
+              </li>
+              <li className="flex items-center mb-4">
+                <img
+                  src="https://storage.googleapis.com/a1aa/image/UVqCGicQY9ruPhfSvDW2xj4tC2hLPI7uGrElf2gUCnaFOopTA.jpg"
+                  alt="User profile picture"
+                  className="rounded-full w-12 h-12"
+                />
+                <div className="ml-4">
+                  <h3 className="font-bold">Ivan Shevchenko</h3>
+                  <button className="bg-blue-500 text-white px-4 py-2 rounded-lg ml-auto">
+                    Follow
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="font-bold text-lg mb-4">Recommendations</h2>
+            <div className="flex flex-wrap space-x-4">
+              <div className="bg-blue-100 p-4 rounded-lg mb-4">
+                <h3 className="font-bold">UI/UX</h3>
+              </div>
+              <div className="bg-pink-100 p-4 rounded-lg mb-4">
+                <h3 className="font-bold">Music</h3>
+              </div>
+              <div className="bg-purple-100 p-4 rounded-lg mb-4">
+                <h3 className="font-bold">Hiking</h3>
+              </div>
+              <div className="bg-green-100 p-4 rounded-lg mb-4">
+                <h3 className="font-bold">Cooking</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+
+      const App = () => (
+        <div className="bg-white rounded-3xl shadow-lg w-full max-w-6xl p-6 flex flex-col md:flex-row">
+          <Sidebar />
+          <MainContent />
+          <RightSidebar />
+        </div>
+      );
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,217 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matou - Explore Asia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <div id="root"></div>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone/babel.min.js"></script>
+    <script type="text/babel">
+      function App() {
+        return (
+          <div>
+            {/* Header Section */}
+            <header
+              className="relative bg-cover bg-center h-screen"
+              style={{
+                backgroundImage:
+                  "url('https://www.pngmagic.com/product_images/nature-background-for-desktop_93b.jpeg')",
+              }}>
+              <div className="absolute inset-0 bg-black opacity-50"></div>
+              <nav className="absolute top-0 left-0 w-full flex justify-between items-center p-6">
+                <div className="text-white text-2xl font-bold">Matou</div>
+                <ul className="flex space-x-6 text-white">
+                  <li>
+                    <a className="hover:underline" href="#">
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a className="hover:underline" href="#">
+                      About Us
+                    </a>
+                  </li>
+                  <li>
+                    <a className="hover:underline" href="#">
+                      Destination
+                    </a>
+                  </li>
+                  <li>
+                    <a className="hover:underline" href="#">
+                      Page
+                    </a>
+                  </li>
+                  <li>
+                    <a className="hover:underline" href="#">
+                      Blog
+                    </a>
+                  </li>
+                </ul>
+                <div className="text-white text-2xl">
+                  <i className="fas fa-bars"></i>
+                </div>
+              </nav>
+              <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6">
+                <h1 className="text-5xl font-bold mb-4">
+                  Explore The Majestic Asia Landscape Now
+                </h1>
+                <p className="mb-4">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aenean commodo ligula eget dolor.
+                </p>
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  Get Started
+                </button>
+              </div>
+            </header>
+
+            {/* Main Content */}
+            <main className="py-16">
+              <section className="container mx-auto px-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                  <div className="relative">
+                    <img
+                      src="https://storage.googleapis.com/a1aa/image/ti3Ses5EdY2tMCL14fHLzLgZmaIfEpaaEV8vfVkt6VPAcimOB.jpg"
+                      alt="Keinking Beach"
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                    <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-4 rounded-b-lg">
+                      <h3 className="text-lg font-bold">Keinking Beach</h3>
+                      <p className="text-sm">Nusa Penida, Bali</p>
+                    </div>
+                  </div>
+                  <div className="relative">
+                    <img
+                      src="https://storage.googleapis.com/a1aa/image/N2hAJUlDwD7zDNu8Lwy8tHQ5Ys4fnBqegwzWMrZR426HnopTA.jpg"
+                      alt="Grand Palace"
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                    <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-4 rounded-b-lg">
+                      <h3 className="text-lg font-bold">Grand Palace</h3>
+                      <p className="text-sm">Bangkok, Thailand</p>
+                    </div>
+                  </div>
+                  <div className="relative">
+                    <img
+                      src="https://storage.googleapis.com/a1aa/image/EI6JYJ8Sn7rPCVgGwlq4xfPDQWfb1TX9uuIF8GVFtNEDnopTA.jpg"
+                      alt="Cappadocia"
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                    <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-4 rounded-b-lg">
+                      <h3 className="text-lg font-bold">Cappadocia</h3>
+                      <p className="text-sm">Turkey</p>
+                    </div>
+                  </div>
+                  <div className="relative">
+                    <img
+                      src="https://storage.googleapis.com/a1aa/image/hdHNd9Jk1FbHB1Ysd352hceE39If0fmrvuaaTmCylqZEORTnA.jpg"
+                      alt="Padar Island"
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                    <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-4 rounded-b-lg">
+                      <h3 className="text-lg font-bold">Padar Island</h3>
+                      <p className="text-sm">East Nusa Tenggara</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="text-center mb-16">
+                  <h2 className="text-3xl font-bold mb-4">
+                    Experience The New Adventure
+                  </h2>
+                  <p className="mb-8">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aenean commodo ligula eget dolor. Aenean massa.
+                  </p>
+                  <div className="flex justify-center space-x-6">
+                    <div className="flex items-center space-x-2">
+                      <i className="fas fa-check-circle text-green-500 text-2xl"></i>
+                      <div>
+                        <h4 className="font-bold">Safe Traveling</h4>
+                        <p className="text-sm">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <i className="fas fa-dollar-sign text-green-500 text-2xl"></i>
+                      <div>
+                        <h4 className="font-bold">Affordable Price</h4>
+                        <p className="text-sm">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <i className="fas fa-bed text-green-500 text-2xl"></i>
+                      <div>
+                        <h4 className="font-bold">Comfort Accommodation</h4>
+                        <p className="text-sm">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="relative">
+                  <img
+                    src="https://storage.googleapis.com/a1aa/image/MBscl9IybvolF1RxIb1IotJveVjgDK6Dfs23FcCE4FCFnopTA.jpg"
+                    alt="Adventure Image"
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                  <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-4 rounded-b-lg">
+                    <h3 className="text-lg font-bold">
+                      Discover A Mesmerizing Nature Landscape & Stunning Culture
+                    </h3>
+                    <p className="text-sm">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Aenean commodo ligula eget dolor. Aenean massa.
+                    </p>
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </main>
+
+            {/* Footer Section */}
+            <footer className="bg-black text-white py-16">
+              <div className="container mx-auto px-6 text-center">
+                <h2 className="text-3xl font-bold mb-4">
+                  Discover A Mesmerizing Nature Landscape & Stunning Culture
+                </h2>
+                <p className="mb-8">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aenean commodo ligula eget dolor. Aenean massa.
+                </p>
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  Learn More
+                </button>
+              </div>
+            </footer>
+          </div>
+        );
+      }
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>

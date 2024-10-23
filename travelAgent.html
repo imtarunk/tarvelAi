@@ -1,0 +1,404 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   TongTiew
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+  </style>
+ </head>
+ <body class="bg-gray-100">
+  <!-- Header -->
+  <header class="bg-purple-700 text-white">
+   <div class="container mx-auto flex justify-between items-center py-2 px-4">
+    <div class="flex items-center space-x-4">
+     <i class="fas fa-phone-alt">
+     </i>
+     <span>
+      +1 900 123 123 21
+     </span>
+    </div>
+    <div class="flex items-center space-x-4">
+     <a class="hover:underline" href="#">
+      Login
+     </a>
+     <a class="hover:underline" href="#">
+      Register
+     </a>
+     <a class="hover:underline" href="#">
+      English
+     </a>
+    </div>
+   </div>
+  </header>
+  <!-- Navigation -->
+  <nav class="bg-white shadow">
+   <div class="container mx-auto flex justify-between items-center py-4 px-4">
+    <div class="flex items-center space-x-4">
+     <img alt="TongTiew Logo" class="h-10" height="50" src="https://storage.googleapis.com/a1aa/image/UcVIwKfO2QQdVax0LlgPe9nmiC2enfSnK3xDqesO6ueYGLa6E.jpg" width="150"/>
+     <ul class="flex space-x-4">
+      <li>
+       <a class="hover:text-purple-700" href="#">
+        Home
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-purple-700" href="#">
+        Hotels
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-purple-700" href="#">
+        Flights
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-purple-700" href="#">
+        Vacations
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-purple-700" href="#">
+        Pages
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-purple-700" href="#">
+        Shortcodes
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-purple-700" href="#">
+        Blog
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-purple-700" href="#">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </div>
+    <button class="bg-purple-700 text-white px-4 py-2 rounded">
+     Purchase
+    </button>
+   </div>
+  </nav>
+  <!-- Hero Section -->
+  <section class="relative">
+   <img alt="Explore Romantic City" class="w-full h-96 object-cover" height="600" src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8fA%3D%3D" width="1920"/>
+   <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white">
+    <h1 class="text-4xl font-bold">
+     Explore Romantic City
+    </h1>
+    <p class="text-lg">
+     Venice, Italy
+    </p>
+    <p class="text-sm">
+     Starting from $250 only
+    </p>
+   </div>
+  </section>
+  <!-- Search Section -->
+  <section class="bg-gray-200 py-4">
+   <div class="container mx-auto">
+    <div class="bg-white p-4 rounded shadow">
+     <div class="flex space-x-4 mb-4">
+      <button class="bg-purple-700 text-white px-4 py-2 rounded">
+       Hotels
+      </button>
+      <button class="bg-gray-300 text-gray-700 px-4 py-2 rounded">
+       Flights
+      </button>
+      <button class="bg-gray-300 text-gray-700 px-4 py-2 rounded">
+       Vacations
+      </button>
+      <button class="bg-gray-300 text-gray-700 px-4 py-2 rounded">
+       Cars
+      </button>
+      <button class="bg-gray-300 text-gray-700 px-4 py-2 rounded">
+       Cruises
+      </button>
+     </div>
+     <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+      <input class="col-span-1 md:col-span-2 p-2 border rounded" placeholder="Where to stay?" type="text"/>
+      <input class="p-2 border rounded" placeholder="Check in" type="text"/>
+      <input class="p-2 border rounded" placeholder="Check out" type="text"/>
+      <input class="p-2 border rounded" placeholder="Adult" type="number"/>
+      <input class="p-2 border rounded" placeholder="Child" type="number"/>
+      <button class="bg-purple-700 text-white px-4 py-2 rounded col-span-1 md:col-span-1">
+       Search
+      </button>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Best Offers Section -->
+  <section class="py-8">
+   <div class="container mx-auto">
+    <h2 class="text-2xl font-bold mb-4">
+     Best Offers
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="The Hilton Maldives Resort &amp; Spa" class="w-full h-40 object-cover rounded mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/tZaS0Gpes0xudSYlBHEF3rdKulAsyLQ15mfnjEvMD9ZgsopTA.jpg" width="300"/>
+      <h3 class="text-lg font-bold">
+       The Hilton Maldives Resort &amp; Spa
+      </h3>
+      <p class="text-gray-600">
+       Rangali Island, Maldives
+      </p>
+      <p class="text-gray-600">
+       Save 50%
+      </p>
+      <div class="flex justify-between items-center mt-4">
+       <span class="text-gray-600 line-through">
+        $1000
+       </span>
+       <span class="text-purple-700 font-bold">
+        $500
+       </span>
+      </div>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="Anantara Seminyak Resort &amp; Spa" class="w-full h-40 object-cover rounded mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/KbTieXtmmAVkHyO2CUgSeoQdaJYIVwBA1Mqv785fv9WjYRTnA.jpg" width="300"/>
+      <h3 class="text-lg font-bold">
+       Anantara Seminyak Resort &amp; Spa
+      </h3>
+      <p class="text-gray-600">
+       Bali, Indonesia
+      </p>
+      <p class="text-gray-600">
+       Save 20%
+      </p>
+      <div class="flex justify-between items-center mt-4">
+       <span class="text-gray-600 line-through">
+        $600
+       </span>
+       <span class="text-purple-700 font-bold">
+        $500
+       </span>
+      </div>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="Shanti Maurice" class="w-full h-40 object-cover rounded mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/MC2asnfIf9hdmEgNQmR11Efome3tx4zVVE6ghbhI0q20ximOB.jpg" width="300"/>
+      <h3 class="text-lg font-bold">
+       Shanti Maurice
+      </h3>
+      <p class="text-gray-600">
+       Grenade, Mauritius
+      </p>
+      <p class="text-gray-600">
+       Save 45%
+      </p>
+      <div class="flex justify-between items-center mt-4">
+       <span class="text-gray-600 line-through">
+        $900
+       </span>
+       <span class="text-purple-700 font-bold">
+        $500
+       </span>
+      </div>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="Mandarin Oriental" class="w-full h-40 object-cover rounded mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/XMfP14rSBLSBA6n6d63BIHhjFHVbR35MYBnfeHeNUVMgximOB.jpg" width="300"/>
+      <h3 class="text-lg font-bold">
+       Mandarin Oriental
+      </h3>
+      <p class="text-gray-600">
+       Hong Kong, China
+      </p>
+      <p class="text-gray-600">
+       Save 50%
+      </p>
+      <div class="flex justify-between items-center mt-4">
+       <span class="text-gray-600 line-through">
+        $1000
+       </span>
+       <span class="text-purple-700 font-bold">
+        $500
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Top Destinations Section -->
+  <section class="py-8 bg-gray-200">
+   <div class="container mx-auto">
+    <h2 class="text-2xl font-bold mb-4">
+     Top Destinations
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="Bora Bora, French Polynesia" class="w-full h-40 object-cover rounded mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/xfhbmNnYOPWHcaekCczLGBWtlbBAyQW2YeqwdHL1k0z3YRTnA.jpg" width="300"/>
+      <h3 class="text-lg font-bold">
+       Bora Bora, French Polynesia
+      </h3>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="Hong Kong, China" class="w-full h-40 object-cover rounded mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/fex5jdefv0YaHR4z85wAJC1rewsCH28yAK7Ern3z3TdbkFNdC.jpg" width="300"/>
+      <h3 class="text-lg font-bold">
+       Hong Kong, China
+      </h3>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="Mykonos, Greece" class="w-full h-40 object-cover rounded mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/HTETkl1I9A7lJ97eL9wp6ONfaXzpguvx7ZWlT8br3T2csopTA.jpg" width="300"/>
+      <h3 class="text-lg font-bold">
+       Mykonos, Greece
+      </h3>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="San Francisco, USA" class="w-full h-40 object-cover rounded mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/zJGOPphpfDQiMKenKK6WO2vHNz8R1soh7R34sl8nYVlUsopTA.jpg" width="300"/>
+      <h3 class="text-lg font-bold">
+       San Francisco, USA
+      </h3>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="Dubai, UAE" class="w-full h-40 object-cover rounded mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/3YE1eNkqeAq7vEdUhmIxCFJPiWUQue4whXrkLnlXEhYrYRTnA.jpg" width="300"/>
+      <h3 class="text-lg font-bold">
+       Dubai, UAE
+      </h3>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="Verona, Italy" class="w-full h-40 object-cover rounded mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/KFTINVuvF8oOOxPkpEl1DADjD9gSX89TYVR3ipRvQliFLa6E.jpg" width="300"/>
+      <h3 class="text-lg font-bold">
+       Verona, Italy
+      </h3>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="Santorini, Greece" class="w-full h-40 object-cover rounded mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/fojeF51e9ZCfnRaWnGc1JN4ltIIpCgFzpDXgXAaDtswLximOB.jpg" width="300"/>
+      <h3 class="text-lg font-bold">
+       Santorini, Greece
+      </h3>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="New York, USA" class="w-full h-40 object-cover rounded mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/FsU3qLblv64RCBtbrtfMUevuM4SnVO2Ci517Cg2wFeVFZRTnA.jpg" width="300"/>
+      <h3 class="text-lg font-bold">
+       New York, USA
+      </h3>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+   <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-4">
+    <div>
+     <h3 class="text-lg font-bold mb-4">
+      About Us
+     </h3>
+     <img alt="TongTiew Logo" class="h-10 mb-4" height="50" src="https://storage.googleapis.com/a1aa/image/UcVIwKfO2QQdVax0LlgPe9nmiC2enfSnK3xDqesO6ueYGLa6E.jpg" width="150"/>
+     <p>
+      Let us help you create the feeling of being at home.
+     </p>
+     <div class="flex space-x-4 mt-4">
+      <a class="text-white" href="#">
+       <i class="fab fa-facebook-f">
+       </i>
+      </a>
+      <a class="text-white" href="#">
+       <i class="fab fa-twitter">
+       </i>
+      </a>
+      <a class="text-white" href="#">
+       <i class="fab fa-instagram">
+       </i>
+      </a>
+      <a class="text-white" href="#">
+       <i class="fab fa-youtube">
+       </i>
+      </a>
+     </div>
+    </div>
+    <div>
+     <h3 class="text-lg font-bold mb-4">
+      Travel Specialists
+     </h3>
+     <ul>
+      <li>
+       <a class="hover:underline" href="#">
+        Honeymoon
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Family Vacation
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Business Travel
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Cruise Vacation
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Group Travel
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Tropical Adventure
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h3 class="text-lg font-bold mb-4">
+      Quick Links
+     </h3>
+     <ul>
+      <li>
+       <a class="hover:underline" href="#">
+        Make Reservation
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Travel Insurance
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Special Offers
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Travel Advisories
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Press Room
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h3 class="text-lg font-bold mb-4">
+      Newsletter
+     </h3>
+     <form>
+      <input class="p-2 w-full mb-4 rounded" placeholder="Enter your email" type="email"/>
+      <button class="bg-purple-700 text-white px-4 py-2 rounded w-full">
+       Subscribe
+      </button>
+     </form>
+     <div class="mt-4">
+      <h3 class="text-lg font-bold mb-2">
+       Customer Support
+      </h
